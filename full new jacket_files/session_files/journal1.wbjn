@@ -1,0 +1,147 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+template1 = GetTemplate(TemplateName="Geometry")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+template2 = GetTemplate(TemplateName="Mesh")
+system2 = template2.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+geometryComponent1 = system2.GetComponent(Name="Geometry")
+geometryComponent2 = system1.GetComponent(Name="Geometry")
+geometryComponent1.ReplaceWithShare(
+    TargetSystem=system2,
+    ComponentToShare=geometryComponent2,
+    SourceSystem=system1)
+meshComponent1 = system2.GetComponent(Name="Mesh")
+meshComponent1.Refresh()
+mesh1 = system2.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+template3 = GetTemplate(
+    TemplateName="Steady-State Thermal",
+    Solver="ANSYS")
+system3 = template3.CreateSystem(
+    Position="Right",
+    RelativeTo=system2)
+engineeringData1 = system3.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.CreateMaterial(Name="cotton")
+matlProp1 = matl1.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp1.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["0.029 [W m^-1 C^-1]"]])
+matlProp1.SetVariableProperty(
+    VariableName="Thermal Conductivity",
+    Property="Unit",
+    Value="W m^-1 K^-1")
+matlProp1.SetData(
+    Variables=["Thermal Conductivity"],
+    Values=[["0.029 [W m^-1 K^-1]"]])
+system2.Delete()
+geometryComponent3 = system3.GetComponent(Name="Geometry")
+geometryComponent3.ReplaceWithShare(
+    TargetSystem=system3,
+    ComponentToShare=geometryComponent2,
+    SourceSystem=system1)
+modelComponent1 = system3.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system3.GetContainer(ComponentName="Model")
+model1.Edit()
+system4 = template3.CreateSystem(
+    Position="Below",
+    RelativeTo=system1)
+geometryComponent4 = system4.GetComponent(Name="Geometry")
+geometryComponent4.ReplaceWithShare(
+    TargetSystem=system4,
+    ComponentToShare=geometryComponent2,
+    SourceSystem=system1)
+engineeringData2 = system4.GetContainer(ComponentName="Engineering Data")
+matl2 = engineeringData2.CreateMaterial(Name="nilonn")
+matl2.DisplayName = "nylon"
+matlProp2 = matl2.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp2.SetVariableProperty(
+    VariableName="Thermal Conductivity",
+    Property="Unit",
+    Value="W m^-1 K^-1")
+matlProp2.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["0.25 [W m^-1 K^-1]"]])
+modelComponent2 = system4.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model2 = system4.GetContainer(ComponentName="Model")
+model2.Edit()
+system5 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system3)
+geometry2 = system5.GetContainer(ComponentName="Geometry")
+geometry2.Edit(IsSpaceClaimGeometry=True)
+geometry2.Exit()
+geometryComponent5 = system5.GetComponent(Name="Geometry")
+geometryComponent5.Reset()
+geometry2.Edit()
+geometry2.Exit()
+system5.Delete()
+system6 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system3)
+geometry3 = system6.GetContainer(ComponentName="Geometry")
+geometry3.Edit(IsSpaceClaimGeometry=True)
+geometry3.Exit()
+system7 = template3.CreateSystem(
+    Position="Right",
+    RelativeTo=system6)
+system8 = template3.CreateSystem(
+    Position="Below",
+    RelativeTo=system7)
+geometryComponent6 = system7.GetComponent(Name="Geometry")
+geometryComponent7 = system6.GetComponent(Name="Geometry")
+geometryComponent6.ReplaceWithShare(
+    TargetSystem=system7,
+    ComponentToShare=geometryComponent7,
+    SourceSystem=system6)
+geometryComponent8 = system8.GetComponent(Name="Geometry")
+geometryComponent8.ReplaceWithShare(
+    TargetSystem=system8,
+    ComponentToShare=geometryComponent7,
+    SourceSystem=system6)
+model1.Exit()
+model2.Exit()
+engineeringData3 = system7.GetContainer(ComponentName="Engineering Data")
+matl3 = engineeringData3.CreateMaterial(Name="cotton")
+matlProp3 = matl3.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp3.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["0.029 [W m^-1 C^-1]"]])
+engineeringData4 = system8.GetContainer(ComponentName="Engineering Data")
+matl4 = engineeringData4.CreateMaterial(Name="nylon")
+matlProp4 = matl4.CreateProperty(
+    Name="Thermal Conductivity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp4.SetData(
+    Index=-1,
+    Variables=["Thermal Conductivity"],
+    Values=[["0.25 [W m^-1 C^-1]"]])
+modelComponent3 = system7.GetComponent(Name="Model")
+modelComponent3.Refresh()
+model3 = system7.GetContainer(ComponentName="Model")
+model3.Edit()
+modelComponent4 = system8.GetComponent(Name="Model")
+modelComponent4.Refresh()
+model4 = system8.GetContainer(ComponentName="Model")
+model4.Edit()
+Save(Overwrite=True)

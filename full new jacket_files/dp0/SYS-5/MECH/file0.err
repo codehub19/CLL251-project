@@ -1,0 +1,18 @@
+/COM,ANSYS RELEASE 2024 R1           BUILD 24.1      UP20231106       12:57:01
+
+ *** WARNING ***                         CP =       0.125   TIME= 12:57:02
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       0.141   TIME= 12:57:02
+ Contact element 3416 is missing DOF VOLT (and possibly others) of       
+ underlying base element 193.  Similar mismatches may exist elsewhere,   
+ but checking for this is discontinued.                                  
+
+ *** WARNING ***                         CP =       0.297   TIME= 12:57:02
+ Coefficient ratio exceeds 1.0e8 - Check results.                        
+
+ *** WARNING ***                         CP =       0.656   TIME= 12:57:03
+ The coupled-field analysis is weakly coupled and requires at least two  
+ iterations to achieve a coupled response.  Please check the results     
+ carefully.                                                              

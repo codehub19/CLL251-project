@@ -1,0 +1,12 @@
+﻿# 
+# This file contains the parameter values of the Design Points successfully updated by Ansys Workbench.
+# Project name: full new jacket
+# Creation date: 05/05/2024 15:57:59
+# 
+# 05/05/2024 15:57:59
+# The parameters defined in the project are:
+# ,P1 - parameter-2 [kg m^-3],P2 - parameter-3 [kg m^-3],P3 - parameter-4 [J kg^-1 K^-1],P4 - parameter-5 [W m^-1 K^-1],P5 - parameter-6 [J kg^-1 K^-1],P6 - parameter-7 [kg m^-3],P7 - parameter-8 [J kg^-1 K^-1],P8 - parameter-9 [W m^-1 K^-1],P9 - parameter-10 [kg m^-3],P10 - parameter-11 [W m^-1 K^-1],P11 - parameter-12 [J kg^-1 K^-1]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11
+DP 0,1540,600,1340,0.029,1340,1010,2578,0.29,1310,0.25,1670

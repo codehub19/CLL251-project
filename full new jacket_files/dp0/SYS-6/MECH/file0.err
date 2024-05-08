@@ -1,0 +1,23 @@
+/COM,ANSYS RELEASE 2024 R1           BUILD 24.1      UP20231106       12:03:11
+
+ *** WARNING ***                         CP =       0.219   TIME= 12:03:12
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       0.219   TIME= 12:03:12
+ Material number 14 (used by element 6915) should normally have at least 
+ one MP or one TB type command associated with it.  Output of energy by  
+ material may not be available.                                          
+
+ *** WARNING ***                         CP =       0.547   TIME= 12:03:13
+ Coefficient ratio exceeds 1.0e8 - Check results.                        
+
+ *** WARNING ***                         CP =       1.078   TIME= 12:03:13
+ Material property RSVX of material 1 of element 141 is evaluated at a   
+ temperature of 449.188294, which is above the supplied temperature      
+ range.  Temperature range checking terminates.                          
+
+ *** WARNING ***                         CP =       1.078   TIME= 12:03:13
+ Material property RSVX of material 1 of element 461 is evaluated at a   
+ temperature of 449.366406, which is above the supplied temperature      
+ range.  Temperature range checking terminates.                          

@@ -1,0 +1,116 @@
+Transcript Start Time:  15:22:12, 21 Apr 2024 India Standard Time 
+Current Directory: "C:\Users\Lucky Bhuskute"
+
+Build Time: Nov 22 2023 10:27:48 EST 
+Executable Path: D:/ansys/ANSYS Inc/ANSYS Student/v241/fluent/ntbin/win64/fluent.exe
+
+------------------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    Vendor                                  
+------------------------------------------------------------------------------------------
+n0*   LAPTOP-E7PVBET6  1/12  Windows-x64  13356  12th Gen Intel(R) Core(TM) i5-12450H    
+host  LAPTOP-E7PVBET6        Windows-x64  40608  12th Gen Intel(R) Core(TM) i5-12450H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+------------------------------------------------------------------------------------------
+
+Cortex Process ID: 52720 
+License Server Path: () 
+Note: Rank = 0: Process affinity not being set (6).
+Reading "C:\Users\Lucky Bhuskute\Downloads\full new jacket_files\dp0\SYS-7\MECH\SYS-7.msh"...
+Buffering for file scan...
+
+    4563 nodes, binary.
+     480 nodes, binary.
+    3120 2D interior faces, zone  1, binary.
+    3120 2D interior faces, zone  2, binary.
+    3120 2D interior faces, zone  3, binary.
+      40 2D wall faces, zone  9, binary.
+      40 2D wall faces, zone 10, binary.
+      80 2D wall faces, zone 11, binary.
+      80 2D wall faces, zone 12, binary.
+      80 2D wall faces, zone 13, binary.
+      40 2D wall faces, zone 14, binary.
+      80 2D wall faces, zone 15, binary.
+      40 2D wall faces, zone 16, binary.
+    1600 quadrilateral cells, zone  6, binary.
+    1600 quadrilateral cells, zone  7, binary.
+    1600 quadrilateral cells, zone  8, binary.
+
+Building...
+     mesh
+     materials,
+     interface,
+     domains,
+     zones,
+	wall-skin
+	wall-air
+	wall-cotton
+	adiabetic-skin
+	adiabetic-air
+	adiabetic-cotton
+	inner_body
+	environment
+	skin
+	air
+	cotton
+	interior-skin
+	interior-air
+	interior-cotton
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+
+Writing Settings file "C:\Users\Lucky Bhuskute\Downloads\full new jacket_files\dp0\FLU\Fluent\SYS-7.set"...
+	writing rp variables ... Done.
+	writing domain variables ... Done.
+	writing cotton (type fluid) (mixture) ... Done.
+	writing air (type fluid) (mixture) ... Done.
+	writing skin (type fluid) (mixture) ... Done.
+	writing interior-cotton (type interior) (mixture) ... Done.
+	writing interior-air (type interior) (mixture) ... Done.
+	writing interior-skin (type interior) (mixture) ... Done.
+	writing environment (type wall) (mixture) ... Done.
+	writing inner_body (type wall) (mixture) ... Done.
+	writing adiabetic-cotton (type wall) (mixture) ... Done.
+	writing adiabetic-air (type wall) (mixture) ... Done.
+	writing adiabetic-skin (type wall) (mixture) ... Done.
+	writing wall-cotton (type wall) (mixture) ... Done.
+	writing wall-air (type wall) (mixture) ... Done.
+	writing wall-skin (type wall) (mixture) ... Done.
+	writing zones map name-id ... Done.
+Fast-loading "D:\ansys\ANSYS Inc\ANSYS Student\v241\fluent\fluent24.1.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Writing to LAPTOP-E7PVBET6:"C:\Users\Lucky Bhuskute\Downloads\full new jacket_files\dp0\FLU\Fluent\SYS-7-Setup-Output.cas.h5" in NODE0 mode and compression level 1 ...
+Grouping cells for Laplace smoothing ...
+        4800 cells,     3 zones ...
+        9840 faces,    11 zones ...
+        5043 nodes,     1 zone  ...
+  Done.
+Done.
+
+Performance Timer for 0 iterations on 1 compute node
+  Average wall-clock time per iteration:                0.000 sec
+  Global reductions per iteration:                          0 ops
+  Global reductions time per iteration:                 0.000 sec (0.0%)
+  Message count per iteration:                              0 messages
+  Data transfer per iteration:                          0.000 MB
+  LE solves per iteration:                                  0 solves
+  LE wall-clock time per iteration:                     0.000 sec (0.0%)
+  LE global solves per iteration:                           0 solves
+  LE global wall-clock time per iteration:              0.000 sec (0.0%)
+  LE global matrix maximum size:                            0
+  AMG cycles per iteration:                             0.000 cycles
+  Relaxation sweeps per iteration:                          0 sweeps
+  Relaxation exchanges per iteration:                       0 exchanges
+  LE early protections (stall) per iteration:           0.000 times
+  LE early protections (divergence) per iteration:      0.000 times
+  Total SVARS touched:                                    370
+
+  Total wall-clock time:                                0.000 sec
+
+Transcript Stop Time:  15:22:34, 21 Apr 2024 India Standard Time 
+Total Transcript Time: 0 Minute 22 Second.
